@@ -50,7 +50,7 @@ function GreeAC(log, config) {
     this.TargetHeatingCoolingState = Characteristic.TargetHeatingCoolingState.OFF;
     this.TargetTemperature = 22;
     this.CurrentTemperature = 0;
-    this.TurboMode =  Characteristic.TargetHeatingCoolingState.OFF;
+    this.TurboMode =  0;
     this.services = [];
 
     this.GreeACService = new Service.Thermostat(this.name);
