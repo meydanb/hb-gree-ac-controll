@@ -323,6 +323,17 @@ GreeAC.prototype = {
         }
     },
 
+    getTargetTurboState: function (callback) {
+        var accessory = this;
+        var log = this.log;
+        try {
+            accessory.TurboState = parseInt(accessory.hvac.device.props[commands.turbo.code]);
+            callback(null, accessory.TargetTemperature);
+        } catch (err) {
+            callback();
+        }
+    },
+
     setTargetTemperature: function (TargetTemperature, callback, context) {
         var accessory = this;
         var log = this.log;
