@@ -299,7 +299,14 @@ class Device {
             [value]
         );
     };
-    
+
+    setTurbo (value) {
+        var that = this;
+        that._sendCommand(
+            [cmd.turbo.code],
+            [value]
+        );
+    };
 };
 
 module.exports.connect = function(options) {
